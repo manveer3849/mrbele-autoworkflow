@@ -176,6 +176,7 @@ def privacy():
 def terms():
     return "Terms: Business auto-reply only. manveer998829@gmail.com"
 
+
 @app.route('/data-deletion')
 def deletion():
     return "To delete data, DM 'DELETE MY DATA' or email manveer998829@gmail.com"
