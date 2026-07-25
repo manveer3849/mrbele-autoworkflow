@@ -43,10 +43,23 @@ def ask_llama(user_message, username):
         print(e)
         return f"Hey {username}! Thanks for DM. We will ping you!"
 
+
 @app.route("/")
 def home():
-    return jsonify({"status":"MRBELE V3 ONLINE 24/7","model":"Llama-3.3-70B","settings":SETTINGS,"time":datetime.now().isoformat()})
-
+    return """
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>MRBELE Bot</title>
+        <!-- PASTE YOUR META VERIFICATION OR HEAD TAGS HERE -->
+    </head>
+    <body>
+        <h1>MRBELE V3 ONLINE 24/7</h1>
+        <p>Welcome to MRBELE Auto DM Bot</p>
+        <!-- PASTE ANY BODY CODE HERE -->
+    </body>
+    </html>
+    """
 @app.route("/settings", methods=["GET","POST"])
 def settings_route():
     global SETTINGS
