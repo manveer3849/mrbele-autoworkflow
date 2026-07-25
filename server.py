@@ -94,6 +94,16 @@ def chat_route():
         return jsonify({"reply":None,"status":"AutoDM OFF - Logged only","copyright":copyright_res})
     reply=ask_llama(msg, username)
     return jsonify({"reply":reply,"copyright":copyright_res})
+@app.route('/privacy')
+def privacy():
+    return "Privacy Policy: This app @mvsventures bot only reads Instagram DMs to auto-reply about services. No data stored. Contact: manveer998829@gmail.com"
 
+@app.route('/terms')
+def terms():
+    return "Terms: This bot is for business auto-reply only."
+
+@app.route('/data-deletion')
+def deletion():
+    return "To delete your data, DM us 'DELETE MY DATA' or email manveer998829@gmail.com"
 if __name__=="__main__":
     app.run(host="0.0.0.0", port=10000)
